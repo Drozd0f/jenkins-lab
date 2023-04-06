@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy to S3') {
             steps {
-                aws s3 cp index.html s3://jenkins-drozdov
+                sh `aws s3 cp index.html s3://jenkins-drozdov`
             }
         }
     }
