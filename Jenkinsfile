@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy to EC-2') {
             steps {
-                sh 'rsync -avz . root@172.31.25.67:/var/lib/nginx/lab1'
+                sh 'rsync -avz . root@172.31.25.67:/usr/share/nginx/www'
             }
         }
     }
